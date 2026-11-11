@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-surface-600;
+  }
+}
+
+/* Markdown preview styles */
+.prose {
+  @apply text-surface-200 leading-relaxed;
+}
+
+.prose h1 {
+  @apply text-2xl font-semibold text-white mt-6 mb-3;
+}
+
+.prose h2 {
+  @apply text-xl font-semibold text-white mt-5 mb-2;
+}
+
+.prose h3 {
+  @apply text-lg font-medium text-white mt-4 mb-2;
+}
+
+.prose p {
+  @apply mb-3;
+}
+
+.prose ul {
+  @apply list-disc pl-5 mb-3;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 mb-3;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose code {
+  @apply bg-surface-800 text-emerald-300 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-surface-900 border border-surface-800 rounded-lg p-4 overflow-x-auto mb-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-surface-200;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-surface-600 pl-4 italic text-surface-400 my-4;
+}
+
+.prose a {
+  @apply text-sky-400 underline underline-offset-2 hover:text-sky-300;
+}
+
+.prose hr {
+  @apply border-surface-700 my-6;
+}
